@@ -66,3 +66,7 @@ console.log(hombresDiabeticos);
 
 const diasHospitalizados = personas.reduce((incremento, personas) => incremento + personas.diasIngresado, 0);
 console.log(diasHospitalizados);
+
+const edadMediaMujeres = personas.filter((persona) => persona.paciente.sexo === "M").reduce((incremento, personas) => incremento + personas.paciente.edad, 0) / 3;
+console.log(edadMediaMujeres);
+// final xurrutero //
