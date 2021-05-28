@@ -1,4 +1,4 @@
- const personas = [
+const personas = [
     {
         paciente: {
             nombre: 'Manuel',
@@ -47,15 +47,16 @@
     {
         paciente: {
             nombre: 'Isabel',
-            edad: 63,
+            edad: 15,
             sexo: 'M'
         },
         diasIngresado: 6,
         dieta: 'Sin sal'
     }
 ];
-const numerosDePacientes = personas.map((numero) => personas.length);
-console.log(numerosDePacientes);
 
+const numeroPacientes = personas.length;
+console.log(numeroPacientes);
 
-
+const mayoresEdad = personas.filter((persona) => persona.paciente.edad >= 18);
+console.log(mayoresEdad);
