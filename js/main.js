@@ -47,7 +47,7 @@ const personas = [
     {
         paciente: {
             nombre: 'Isabel',
-            edad: 15,
+            edad: 63,
             sexo: 'M'
         },
         diasIngresado: 6,
@@ -60,3 +60,9 @@ console.log(numeroPacientes);
 
 const mayoresEdad = personas.filter((persona) => persona.paciente.edad >= 18);
 console.log(mayoresEdad);
+
+const hombresDiabeticos = personas.filter((hombreDiabetico) => hombreDiabetico.paciente.sexo === "H" && hombreDiabetico.dieta === "Diabetes");
+console.log(hombresDiabeticos);
+
+const diasHospitalizados = personas.reduce((incremento, personas) => incremento + personas.diasIngresado, 0);
+console.log(diasHospitalizados);
